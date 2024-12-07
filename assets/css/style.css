@@ -1,0 +1,141 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Link to Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Apply the font to your h1 headers */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #333;
+    /* You can change this color */
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    height: 100%;
+}
+
+header {
+    font-family: rackCute;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    grid-row: 2 / span 1;
+}
+
+#formContainer {
+    background-image: url('../images/formbg.jpg');
+    background-repeat: repeat-y;
+    margin: 2% auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-floating {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+
+body {
+    background-image: url('../images/tile.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+#tasks {
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.task {
+    position: relative;
+    background-image: url('../images/notebg.png');
+    background-repeat: no-repeat;
+    padding: 1.5rem 0.4rem;
+    width: 200px;
+    max-height: 250px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+}
+
+.task:hover .delete-btn {
+    display: block;
+    /* Show the delete button on hover */
+}
+
+.task-content {
+    padding-right: 1rem;
+    overflow-y: auto;
+    height: 160px;
+}
+
+.fadeIn {
+    animation: fadeInOpacity 1s ease-out;
+    animation-iteration-count: 1;
+}
+
+@font-face {
+    font-family: rackCute;
+    src: url('../fonts/RackCuteDEMO.otf');
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
